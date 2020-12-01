@@ -21,3 +21,6 @@ This was the one where I had to make two LEDs blink 10 times with a simple bash 
 
 ## Python Blink
 This one was really similar to the previous one. My major hiccup was that I was using GPIO.board instead of GPIO.BCM. I don't fully understand the difference, but I know that saying 17 means pin 17 with BCM. I also forgot the second sleep, which caused some issue. Other than those it was fine.
+
+## SSH with Pi
+This one was short, but very sweet. I was seriously shocked at how easy it was to set up. After the LED assignments, I unplugged the Pi from my computer. I plugged the battery into the powerboost and used the micro USB cable to connect it to my pi. My pi lit up without hassle. I opened my PuTTy session with the IP address and it connected. I could then turn the LED on from across my room. It really did feel like magic, maybe I was just expecting it to be finicky, but I really was blown away. It worked so well it felt like cheating.
