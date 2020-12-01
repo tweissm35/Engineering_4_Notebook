@@ -18,3 +18,6 @@ This one was great fun. I did have a bit of a headstart because I made hangman i
 
 ## Bash Blink
 This was the one where I had to make two LEDs blink 10 times with a simple bash script. Going into this I had never written a bash script, so just about everything was new to me. The most unfamiliar thing was the for loops. I saw some alternate versions of them, so I guess I was lucky to have chosen correctly. The final issue I had is that I made some changes in GitHub, like adding comments. When I tested it on the Pi it didn't work. It turns out I had just forgotten to put spaces in front of my comments. It was an easy fix. The other thing I don't get is why gpio 0 refers to pin #17, that doesn't make any sense to me.
+
+## Python Blink
+This one was really similar to the previous one. My major hiccup was that I was using GPIO.board instead of GPIO.BCM. I don't fully understand the difference, but I know that saying 17 means pin 17 with BCM. I also forgot the second sleep, which caused some issue. Other than those it was fine.
