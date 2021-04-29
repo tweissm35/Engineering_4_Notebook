@@ -30,3 +30,4 @@ This one was short, but very sweet. I was seriously shocked at how easy it was t
 
 ## I2C
 This one also worked well. Both the examples worked without much work, so it wasn't that bad at all. I had one issue where the screen wasn't clearing, so I have it put a black rectangle over the text the hide it. I also initally forgot to convert the data into strings. Other than that, it wasn't bad.
+<br><img src="/media/accelo.jpg" width="350"></br>
