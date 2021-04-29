@@ -27,3 +27,6 @@ This was the wiring for the two assignments above. There's not much to look at. 
 
 ## SSH with Pi
 This one was short, but very sweet. I was seriously shocked at how easy it was to set up. After the LED assignments, I unplugged the Pi from my computer. I plugged the battery into the powerboost and used the micro USB cable to connect it to my pi. My pi lit up without hassle. I opened my PuTTy session with the IP address and it connected. I could then turn the LED on from across my room. It really did feel like magic, maybe I was just expecting it to be finicky, but I really was blown away. It worked so well it felt like cheating.
+
+## I2C
+This one also worked well. Both the examples worked without much work, so it wasn't that bad at all. I had one issue where the screen wasn't clearing, so I have it put a black rectangle over the text the hide it. I also initally forgot to convert the data into strings. Other than that, it wasn't bad.
