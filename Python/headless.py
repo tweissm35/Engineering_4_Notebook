@@ -43,7 +43,7 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 # Load default font.
 #font = ImageFont.load_default()
-font = ImageFont.truetype(font="/home/pi/Documents/Engineering_4_Notebook/Minecraft.ttf")
+font = ImageFont.truetype(font="/home/pi/Documents/Engineering_4_Notebook/Pixeled.ttf")
 
 while  True:
 	#clear display
@@ -65,7 +65,7 @@ while  True:
 	# Write the accelerometer values
 	#draw.text((0, 0), 'x accel: '+str(accel_x),  font=font, fill=255)
 
-	draw.text((0,0), 'edges represent 12ms^2',font=font, fill=255,size=12)
+	draw.text((0,0), 'edges represent 12ms^2',font=font, fill=255)
 
 	draw.line([(64,0),(64,64)],width=1, fill=255)
 	draw.line([(32,32),(96,32)],width=1, fill=255)
