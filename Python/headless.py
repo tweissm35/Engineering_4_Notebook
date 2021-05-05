@@ -4,9 +4,7 @@ import Adafruit_SSD1306
 
 import Adafruit_LSM303
 
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 def mapp(x,in_min,in_max,out_min,out_max):#this function maps a value in one range to the equivalent value in another
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
@@ -44,7 +42,8 @@ draw = ImageDraw.Draw(image)
 draw.rectangle((0,0,width,height), outline=0, fill=0)
 
 # Load default font.
-font = ImageFont.load_default()
+#font = ImageFont.load_default()
+font = ImageFont.truetype(font="/home/pi/Documents/Engineering_4_Notebook/Minecraft.ttf")
 
 while  True:
 	#clear display
@@ -66,7 +65,7 @@ while  True:
 	# Write the accelerometer values
 	#draw.text((0, 0), 'x accel: '+str(accel_x),  font=font, fill=255)
 
-	draw.text((0,0), 'edges represent 12ms^2',font=font, fill=255)
+	draw.text((0,0), 'edges represent 12ms^2',font=font, fill=255,size=12)
 
 	draw.line([(64,0),(64,64)],width=1, fill=255)
 	draw.line([(32,32),(96,32)],width=1, fill=255)
