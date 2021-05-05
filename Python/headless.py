@@ -8,6 +8,9 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
+def mapp(x,in_min,in_max,out_min,out_max):#this function maps a value in one range to the equivalent value in another
+	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+
 #set up accelerometer
 lsm303 = Adafruit_LSM303.LSM303()
 
@@ -48,20 +51,27 @@ while  True:
 	disp.clear()
 	draw.rectangle((0,0,width,height), outline=0, fill=0)
 
+	draw.ellipse((32, 0, height+32, height-1), outline=255, fill=0)
+
 	#read data from accelerometer
 	accel, mag = lsm303.read()
 
 	accel_x, accel_y, accel_z = accel
 	mag_x, mag_y, mag_z = mag
 
-	accel_x/=100
-	accel_y/=100
-	accel_z/=100
+	y_pos=mapp(accel_x,-1200,1200,0,height)
+	x_pos=mapp(accel_y,-1200,1200,32,96)
+
 
 	# Write the accelerometer values
-	draw.text((0, 0), 'x accel: '+str(accel_x),  font=font, fill=255)
-	draw.text((0, 10), 'y accel: '+str(accel_y), font=font, fill=255)
-	draw.text((0, 20), 'z accel: '+str(accel_z), font=font, fill=255)
+	#draw.text((0, 0), 'x accel: '+str(accel_x),  font=font, fill=255)
+
+	draw.text((0,0), 'edges represent 12ms^2',font=font, fill=255)
+
+	draw.line([(64,0),(64,64)],width=1, fill=255)
+	draw.line([(32,32),(96,32)],width=1, fill=255)
+
+	draw.ellipse((x_pos-2, y_pos-2, x_pos+2, y_pos+2), fill=255)
 
 	# Display image.
 	disp.image(image)
