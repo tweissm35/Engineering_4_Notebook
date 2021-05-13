@@ -35,3 +35,6 @@ This one also worked well. Both the examples worked without much work, so it was
 ## Headless
 For this one instead of using one variable from the accelerometer, I used two. There's a dot inside a circle that shows the rotation. Pretty much all of my problems were simple fixes. I tried using a smaller font and I did find some, but the kerning for them was so bad I couldn't use them. I think the final effect is pretty cool. It's like a little marble that always falls to the bottom.
 <br><img src="/media/headless_full.jpg" width="500"><img src="/media/headless_screen.jpg" width="150"></br>
+
+## Hello Flask
+This one worked well. It took a while for the page to load, but I didn't have any errors or troubles.
