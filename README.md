@@ -31,3 +31,7 @@ This one was short, but very sweet. I was seriously shocked at how easy it was t
 ## I2C
 This one also worked well. Both the examples worked without much work, so it wasn't that bad at all. I had one issue where the screen wasn't clearing, so I have it put a black rectangle over the text the hide it. I also initally forgot to convert the data into strings. Other than that, it wasn't bad.
 <br><img src="/media/accelo.jpg" width="350"></br>
+
+## Headless
+For this one instead of using one variable from the accelerometer, I used two. There's a dot inside a circle that shows the rotation. Pretty much all of my problems were simple fixes. I tried using a smaller font and I did find some, but the kerning for them was so bad I couldn't use them. I think the final effect is pretty cool. It's like a little marble that always falls to the bottom.
+<br><img src="/media/headless_full.jpg" width="500"><img src="/media/headless_screen.jpg" width="150"></br>
