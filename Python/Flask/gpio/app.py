@@ -14,13 +14,13 @@ app = Flask(__name__)
 @app.route("/", methods=["GET","POST"])
 def index():
 	msg="no click yet"
-	if request.form.get('submitBtn1'):
+	if request.form.get('led1'):
 		msg="You clicked the red button"
 		GPIO.output(17,GPIO.HIGH)
-	elif request.form.get('submitBtn2'):
+	elif request.form.get('led2'):
 		msg="You clicked the blue button"
 		GPIO.output(18,GPIO.HIGH)
-
+#have 4 submit buttons one for on, one for off, for each
 	print(request.form.get)
 
 	return render_template("index.html", msg=msg)

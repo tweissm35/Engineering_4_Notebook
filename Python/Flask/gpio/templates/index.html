@@ -1,13 +1,18 @@
 <!doctype html>
 <html>
 <head>
+<style>
+
+</style>
 	<title>GPIO with Flask!</title>
 </head>
 <body>
 {{msg}}
 <form method="POST">
-	<button type="submit" name="submitBtn1" value="clicked">Red LED</button>
-	<button type="submit" name="submitBtn2" value="clicked">Blue LED</button>
+	<input type="checkbox" id="submitBtn1" name="led1" value="red clicked" onChange="this.form.submit()" autocomplete="off">
+	<label for="led1">Red LED</label><br>
+	<input type="checkbox" id="submitBtn2" name="led2" value="blue clicked" onChange="this.form.submit()" autocomplete="off">
+	<label for="led2">Blue LED</label><br>
 
 </form>
 </body>
